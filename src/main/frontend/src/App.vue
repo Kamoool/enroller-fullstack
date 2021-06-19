@@ -32,7 +32,8 @@
                 authenticatedUsername: "",
                 registering: false,
                 message: '',
-                isError: false
+                isError: false,
+                meetings: []
             };
         },
         methods: {
@@ -91,7 +92,7 @@
                 return this.registering ? 'Zarejestruj się' : 'Zaloguj się';
             }
         }
-    };
+    }
 </script>
 
 <style>
