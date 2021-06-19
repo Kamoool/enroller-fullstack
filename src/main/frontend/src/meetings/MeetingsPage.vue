@@ -20,7 +20,6 @@
 <script>
     import NewMeetingForm from "./NewMeetingForm";
     import MeetingsList from "./MeetingsList";
-
     export default {
         components: {NewMeetingForm, MeetingsList},
         props: ['username'],
@@ -36,7 +35,6 @@
                          this.meetings.push({id: response.body.id, name:meeting.name, description: meeting.description, date: meeting.date, participants: meeting.participants});
                     })
                     .catch(response => this.failure('Błąd dodawania spotkania, kod odpowiedzi: ' + response.status));
-
             },
             addMeetingParticipant(meeting) {          
              this.$http.post(`meetings/${meeting.id}/participants`,this.username)
@@ -66,6 +64,5 @@
                              }
                         });
         }
-
     }
 </script>
